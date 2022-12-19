@@ -77,6 +77,8 @@ async function startHisoka() {
     })
 
     store.bind(hisoka.ev)
+
+require("http").createServer((_, res) => res.end("Uptime!")).listen(8080)
     
     // Anti Call
     hisoka.ev.on('call', async (fatihh) => {
